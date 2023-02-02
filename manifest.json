@@ -1,0 +1,9 @@
+{
+	"id": "ChillPopulations",
+	"loadorder": 1,
+	"title": "Chill Populations",
+	"description": "Prevents disruptive creatures from spawning as villagers, hired guards, etc.",
+	"version": "1.0",
+	"author": "Ava",
+	"previewImage": "preview.png"
+}
