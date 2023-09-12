@@ -51,7 +51,35 @@
 		<tag Name="NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
-	<object Name="Goatfolk Hero 1" Load="Merge"> <!-- This is a variant that specifically spawns with an escort -->
+	<object Name="Snapjaw Hero 0" Load="Merge">
+		<tag Name="NoCultist" />
+		<tag Name="NoGuard" />
+		<tag Name="NoPariah" />
+		<tag Name="NoThrall" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Snapjaw Hero 1" Load="Merge">
+		<tag Name="NoCultist" />
+		<tag Name="NoGuard" />
+		<tag Name="NoPariah" />
+		<tag Name="NoThrall" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Goatfolk Hero 1" Load="Merge">
+		<tag Name="NoCultist" />
+		<tag Name="NoGuard" />
+		<tag Name="NoPariah" />
+		<tag Name="NoThrall" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Crazed Goatfolk Shaman 1" Load="Merge">
+		<tag Name="NoCultist" />
+		<tag Name="NoGuard" />
+		<tag Name="NoPariah" />
+		<tag Name="NoThrall" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Crazed Goatfolk Shaman 2" Load="Merge">
 		<tag Name="NoCultist" />
 		<tag Name="NoGuard" />
 		<tag Name="NoPariah" />
