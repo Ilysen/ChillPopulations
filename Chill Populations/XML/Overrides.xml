@@ -9,21 +9,33 @@
 		- Psychic thralls of legendary Seekers
 		- Sultan cultists
 
-		Villagers and converts check the ExcludeFromVillagePopulations tag, so we can apply that tag to block them from appearing in those places
+		Villagers and converts check the ExcludeFromVillagePopulations tag, so we can apply that tag to block them from appearing in those places. Since it isn't easily patchable, this is just kind of accepted as a known issue. Sometimes you'll get weep wardens and stuff, c'est la vie
 
-		Hired guards can be prevented with the NoGuard tag. In vanilla this is only present on dream wrens, but we can extend it to anything we want
+		Hired guards can be prevented with the vanilla NoGuard tag. By default this is only present on dream wrens, but we can extend it to anything we want.
 
 		Vanilla has no special logic to prevent thralls, but the method for selecting valid options is easily postfixable with Harmony. We use a new tag, NoThrall, to prevent monsters from appearing as thralls
 
-		Sultan cultists are more complicated because the logic for selecting them is inline. It will need a transpiler
+		Sultan cultists are more complicated because the logic for selecting them is inline. Instead, we prevent the base method from running if the given blueprint has the NoCultist tag.
 
-		The ExcludeFromDynamicEncounters tag in vanilla is unfortunately unsuitable here, because it's very general and would also prevent creatures from appearing in relevant population tables. As a result, to affect the game's functionality less, we use these instead.
-
-		Anyway, onto the exclusions:
+		The ExcludeFromDynamicEncounters tag in vanilla is unfortunately unsuitable here, because it's very general and would also prevent creatures from appearing in relevant population tables. As a result, to affect the game's functionality less, we use these more specific tags instead.
 	-->
 
 	<!-- Creatures that spawn with other creatures or create them with time - breeders, turret tinkers, etc -->
 	<object Name="Chrome Idol" Load="Merge">
+		<tag Name="NoCultist" />
+		<tag Name="NoGuard" />
+		<tag Name="NoPariah" />
+		<tag Name="NoThrall" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Chrome Idol Hero 1" Load="Merge">
+		<tag Name="NoCultist" />
+		<tag Name="NoGuard" />
+		<tag Name="NoPariah" />
+		<tag Name="NoThrall" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Chrome Idol Hero Crazed" Load="Merge">
 		<tag Name="NoCultist" />
 		<tag Name="NoGuard" />
 		<tag Name="NoPariah" />
@@ -45,6 +57,13 @@
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Fire Ant Queen" Load="Merge">
+		<tag Name="NoCultist" />
+		<tag Name="NoGuard" />
+		<tag Name="NoPariah" />
+		<tag Name="NoThrall" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Pulsed Field Magnet" Load="Merge">
 		<tag Name="NoCultist" />
 		<tag Name="NoGuard" />
 		<tag Name="NoPariah" />
