@@ -9,116 +9,105 @@
 		- Psychic thralls of legendary Seekers
 		- Sultan cultists
 
-		Villagers and converts check the ExcludeFromVillagePopulations tag, so we can apply that tag to block them from appearing in those places. Since it isn't easily patchable, this is just kind of accepted as a known issue. Sometimes you'll get weep wardens and stuff, c'est la vie
+		The ExcludeFromDynamicEncounters tag in vanilla is unfortunately unsuitable here, because it's very general and would also prevent creatures from appearing in relevant population tables. As a result, to affect the game's functionality less, we use some more specific stuff instead:
+		
+		Villagers and converts check the ExcludeFromVillagePopulations tag, so we can apply that tag to block them from appearing in those places. Since it isn't easily patchable, this is just kind of accepted as a known issue. Sometimes you'll get weep wardens and stuff, ah well
 
 		Hired guards can be prevented with the vanilla NoGuard tag. By default this is only present on dream wrens, but we can extend it to anything we want.
 
-		Vanilla has no special logic to prevent thralls, but the method for selecting valid options is easily postfixable with Harmony. We use a new tag, Ava_ChillPopulations_NoThrall, to prevent monsters from appearing as thralls
+		Vanilla has no special logic to prevent thralls, but the method for selecting valid options is easily postfixable with Harmony. We use a new tag, Ava_ChillPopulations_NoThrall, to prevent monsters from appearing as thralls. NOTE: Creatures with a mental shield (such as robots and oozes) are already barred from being thralls, so it isn't necessary to apply the tag to them to do so.
 
 		Sultan cultists are more complicated because the logic for selecting them is inline. Instead, we prevent the base method from running if the given blueprint has the Ava_ChillPopulations_NoCultist tag.
-
-		The ExcludeFromDynamicEncounters tag in vanilla is unfortunately unsuitable here, because it's very general and would also prevent creatures from appearing in relevant population tables. As a result, to affect the game's functionality less, we use these more specific tags instead.
+		
+		~ ~ ~
+		
+		The design philosophy with all these changes is to prevent stuff that either strictly doesn't make narrative sense (dromad caravan guards staying the trader after they get turned into a thrall, for instance) OR stuff that causes significant mechanical disruption (mine-laying robots turning their home village into a deathtrap, and so on.) For a lot of that kind of thing, the game doesn't differentiate the creature being in a special role when using its behavior, so clonelings will still clone everything in sight, humors will drench the town in acid, and so on - these changes make up the vast majority of the roster.
+		
+		While a small handful of enemy types are excluded in their entirety from showing up in special roles, the lion's share are just prevented from showing up as hired guards or villagers due to the inability to easily turn off their special mechanics (or to have them not use those mechanics unless they're in combat.) Particularly disruptive things are also prevented from becoming pariahs and Seeker thralls. Almost everything can still be a sultan cultist.
 	-->
 
-	<!-- Creatures that spawn with other creatures or create them with time - breeders, turret tinkers, etc -->
+	<!-- Creatures that spawn with other creatures.
+		These are all barred from being guards or thralls, but can still be cultists, pariahs, or villagers.-->
 	<object Name="Chrome Idol" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Chrome Idol Hero 1" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Chrome Idol Hero Crazed" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="DromadTrader" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
+		<!-- Chrome idols have a mental shield, so we don't need to apply the NoThrall tag here -->
 	</object>
 	<object Name="Eyeless King Crab" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Fire Ant Queen" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Pulsed Field Magnet" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Snapjaw Hero 0" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Snapjaw Hero 1" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Goatfolk Hero 1" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Crazed Goatfolk Shaman 1" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Crazed Goatfolk Shaman 2" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Giant Clam" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Mechanimist Houndmaster" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
+	</object>
+	
+	<!-- Creatures that disrupt the map or can cause fights. Turret tinkers, humors, etc. are all included here.
+		These can't be guards, but some of them can be villagers. All of them can be cultists, pariahs, or thralls. -->
+	<object Name="Turret Tinker" Load="Merge">
+		<tag Name="NoGuard" />
+	</object>
+	<object Name="Seedsprout Worm" Load="Merge">
+		<tag Name="NoGuard" />
+	</object>
+	<object Name="Bone Worm" Load="Merge">
+		<tag Name="NoGuard" />
+	</object>
+	<object Name="Molting Basilisk" Load="Merge">
+		<tag Name="NoGuard" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
+	<object Name="Humor" Load="Merge">
+		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Gyrohumor" Load="Merge">
+		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Panhumor" Load="Merge">
+		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Snailmother" Load="Merge">
+		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Segmented Mirthworm" Load="Merge">
+		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Worm of the Earth" Load="Merge">
+		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	
+	<!-- Edge cases that don't fit in anywhere else. -->
+	
+	<!-- While newfathers technically fall under the "spawns with other creatures" category, they're accompanied by enslaved creatures of other type, so it'd be very strange for those slaves to accompany them into their lives as pariahs or hired guards or something. As a result, we prevent them from showing up outside of templar encounters. -->
 	<object Name="Newfather" Load="Merge">
 		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
@@ -133,111 +122,32 @@
 		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
-	<object Name="Segmented Mirthworm" Load="Merge">
+
+	<!-- Dromad traders spawning en masse in basically any location is a recipe for extreme silliness for a variety of reasons. -->
+	<object Name="DromadTrader" Load="Merge">
 		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
 		<tag Name="Ava_ChillPopulations_NoPariah" />
 		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
-	<object Name="Worm of the Earth" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Turret Tinker" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
+	
+	<!-- Like tinkers, miners don't turn off their AI when they generate in different roles. Unlike tinkers, their stuff poses a risk to everyone (even their friends), so we make sure they don't show up in village populations. -->
 	<object Name="BaseMiner" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
 		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
-	<!-- Disruptive creatures; this is a catch-all for things that cause general shenanigans, like seedsprouts messing up the terrain or humors leaving acid everywhere -->
-	<object Name="Chrome Pyramid" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
+
+	<!-- Clonelings will happily clone anything regardless of their role, which means that they tend to make things very silly very quickly. -->
 	<object Name="Cloneling" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
 		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
-	<object Name="FungusPuffer" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Molting Basilisk" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Seedsprout Worm" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Humor" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Gyrohumor" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Panhumor" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<object Name="Snailmother" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
-	<!-- These are things that are immobile or otherwise don't make sense in populations -->
-	<object Name="SparkingBaetyl" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
-		<tag Name="ExcludeFromVillagePopulations" />
-	</object>
+
+	<!-- Weeps always generate liquid, even if they're hired guards or such. Most things are fair game for funsies, but the potential for shenanigans on town maps (particularly the Stilt) means we blacklist them to prevent important NPCs from being melted in a pool of lava/acid/whatever from a giant weep. -->
 	<object Name="LiquidLichen" Load="Merge">
-		<tag Name="Ava_ChillPopulations_NoCultist" />
-		<tag Name="NoGuard" />
-		<tag Name="Ava_ChillPopulations_NoPariah" />
-		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 </objects>

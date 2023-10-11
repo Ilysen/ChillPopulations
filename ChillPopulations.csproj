@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6783AC21-E9E1-4B4F-A90D-09CB9FEC058E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ChillPopulations</RootNamespace>
+    <RootNamespace>Ava.ChillPopulations</RootNamespace>
     <AssemblyName>ChillPopulations</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
