@@ -15,13 +15,13 @@ namespace Ava.ChillPopulations.HarmonyPatches
 	class ThrallPatch
 	{
 		/// <summary>
-		/// Prevent creatures with the "NoThrall" tag from appearing as psychic thralls.
+		/// Prevent creatures with the "Ava_ChillPopulations_NoThrall" tag from appearing as psychic thralls.
 		/// Creatures that have a mental shield, like non-sapient oozes, fungi, etc, are skipped already.
 		/// </summary>
 		[HarmonyPostfix]
 		static void IsSuitableThrallPatch(GameObjectBlueprint BP, ref bool __result)
 		{
-			if (__result && BP.HasTagOrProperty("NoThrall"))
+			if (__result && BP.HasTagOrProperty("Ava_ChillPopulations_NoThrall"))
 				__result = false;
 		}
 	}
@@ -30,7 +30,7 @@ namespace Ava.ChillPopulations.HarmonyPatches
 	class PariahPatch
 	{
 		/// <summary>
-		/// Prevent creatures with the "NoPariah" tag from appearing as pariahs.
+		/// Prevent creatures with the "Ava_ChillPopulations_NoPariah" tag from appearing as pariahs.
 		/// We override the base method here, which is quite destructive.
 		/// While it's probably possible to transpile it to include a new filter in place of the old,
 		/// transpilers in general have good potential to break things.
@@ -38,7 +38,7 @@ namespace Ava.ChillPopulations.HarmonyPatches
 		[HarmonyPrefix]
 		static bool GeneratePariahOverride(int level, bool AlterName, bool IsUnique, ref GameObject __result)
 		{
-			Predicate<GameObjectBlueprint> filter = c => !c.HasTagOrProperty("NoPariah");
+			Predicate<GameObjectBlueprint> filter = c => !c.HasTagOrProperty("Ava_ChillPopulations_NoPariah");
 			GameObject filteredCreature = (level == -1 ? EncountersAPI.GetACreature(filter) : EncountersAPI.GetCreatureAroundLevel(level, filter));
 			__result = PariahSpawner.GeneratePariah(filteredCreature, AlterName, IsUnique);
 			return false;
@@ -49,12 +49,12 @@ namespace Ava.ChillPopulations.HarmonyPatches
 	class HistoricSiteCultistPatch
 	{
 		/// <summary>
-		/// Prevent creatures with the "NoCultist" tag from appearing as cultists in historical sites.
+		/// Prevent creatures with the "Ava_ChillPopulations_NoCultist" tag from appearing as cultists in historical sites.
 		/// </summary>
 		[HarmonyPrefix]
 		static bool ProcessBlueprintForCultRolePatch(GameObjectBlueprint B)
 		{
-			return !B.HasTagOrProperty("NoCultist");
+			return !B.HasTagOrProperty("Ava_ChillPopulations_NoCultist");
 		}
 	}
 
@@ -62,13 +62,13 @@ namespace Ava.ChillPopulations.HarmonyPatches
 	class TombCultistPatch
 	{
 		/// <summary>
-		/// Prevent creatures with the "NoCultist" tag from appearing as cultists in the Tomb of the Eaters.
+		/// Prevent creatures with the "Ava_ChillPopulations_NoCultist" tag from appearing as cultists in the Tomb of the Eaters.
 		/// </summary>
 		[HarmonyPrefix]
 		static void GetLikedFactionMemberPrefix(ref Predicate<GameObjectBlueprint> filter)
 		{
 			Predicate<GameObjectBlueprint> f = filter;
-			filter = s => !s.HasTagOrProperty("NoCultist") && f(s);
+			filter = s => !s.HasTagOrProperty("Ava_ChillPopulations_NoCultist") && f(s);
 		}
 	}
 }

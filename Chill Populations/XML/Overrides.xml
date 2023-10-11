@@ -13,224 +13,231 @@
 
 		Hired guards can be prevented with the vanilla NoGuard tag. By default this is only present on dream wrens, but we can extend it to anything we want.
 
-		Vanilla has no special logic to prevent thralls, but the method for selecting valid options is easily postfixable with Harmony. We use a new tag, NoThrall, to prevent monsters from appearing as thralls
+		Vanilla has no special logic to prevent thralls, but the method for selecting valid options is easily postfixable with Harmony. We use a new tag, Ava_ChillPopulations_NoThrall, to prevent monsters from appearing as thralls
 
-		Sultan cultists are more complicated because the logic for selecting them is inline. Instead, we prevent the base method from running if the given blueprint has the NoCultist tag.
+		Sultan cultists are more complicated because the logic for selecting them is inline. Instead, we prevent the base method from running if the given blueprint has the Ava_ChillPopulations_NoCultist tag.
 
 		The ExcludeFromDynamicEncounters tag in vanilla is unfortunately unsuitable here, because it's very general and would also prevent creatures from appearing in relevant population tables. As a result, to affect the game's functionality less, we use these more specific tags instead.
 	-->
 
 	<!-- Creatures that spawn with other creatures or create them with time - breeders, turret tinkers, etc -->
 	<object Name="Chrome Idol" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Chrome Idol Hero 1" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Chrome Idol Hero Crazed" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="DromadTrader" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Eyeless King Crab" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Fire Ant Queen" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Pulsed Field Magnet" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Snapjaw Hero 0" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Snapjaw Hero 1" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Goatfolk Hero 1" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Crazed Goatfolk Shaman 1" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Crazed Goatfolk Shaman 2" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Giant Clam" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Mechanimist Houndmaster" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Newfather" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
+		<tag Name="ExcludeFromVillagePopulations" />
+	</object>
+	<object Name="Grand Newfather" Load="Merge">
+		<tag Name="Ava_ChillPopulations_NoCultist" />
+		<tag Name="NoGuard" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Segmented Mirthworm" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Worm of the Earth" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Turret Tinker" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="BaseMiner" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<!-- Disruptive creatures; this is a catch-all for things that cause general shenanigans, like seedsprouts messing up the terrain or humors leaving acid everywhere -->
 	<object Name="Chrome Pyramid" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Cloneling" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="FungusPuffer" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Molting Basilisk" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Seedsprout Worm" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Humor" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Gyrohumor" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Panhumor" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Snailmother" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<!-- These are things that are immobile or otherwise don't make sense in populations -->
 	<object Name="SparkingBaetyl" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="LiquidLichen" Load="Merge">
-		<tag Name="NoCultist" />
+		<tag Name="Ava_ChillPopulations_NoCultist" />
 		<tag Name="NoGuard" />
-		<tag Name="NoPariah" />
-		<tag Name="NoThrall" />
+		<tag Name="Ava_ChillPopulations_NoPariah" />
+		<tag Name="Ava_ChillPopulations_NoThrall" />
 		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 </objects>
