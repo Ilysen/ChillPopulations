@@ -66,15 +66,18 @@
 	</object>
 	
 	<!-- Creatures that disrupt the map or can cause fights. Turret tinkers, humors, etc. are all included here.
-		These can't be guards, but some of them can be villagers. All of them can be cultists, pariahs, or thralls. -->
+		These can't be guards or villagers. All of them can be cultists, pariahs, or thralls. -->
 	<object Name="Turret Tinker" Load="Merge">
 		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Seedsprout Worm" Load="Merge">
 		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Bone Worm" Load="Merge">
 		<tag Name="NoGuard" />
+		<tag Name="ExcludeFromVillagePopulations" />
 	</object>
 	<object Name="Molting Basilisk" Load="Merge">
 		<tag Name="NoGuard" />

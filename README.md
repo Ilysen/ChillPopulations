@@ -13,9 +13,8 @@ Note: 1.1 onwards is licensed under GNU General Public License v3. Versions prio
 
 #### Version 1.1
 * Reassessed the whole list of barred creatures. A lot of things can spawn in certain roles now, rather than the block list being completely comprehensive. The new list is as follows:
-	* Cannot be guards: bone worms, seedsprout worms, turret tinkers
 	* Cannot be guards or thralls: chrome idols, eyeless king crabs, fire ant queen, goatfolk heroes,  mechanimist houndmasters, snapjaw heroes
-	* Cannot be guards or villagers: humors of all kids, molting basilisks, segmented mirthworms, snailmothers, worms of the earth
+	* Cannot be guards or villagers: bone worms, humors of all kinds, molting basilisks, seedsprout worms, segmented mirthworms, snailmothers, turret tinkers, worms of the earth
 	* Special cases:
 		* Newfathers and dromad traders remain blocked from all special roles
 		* Clonelings and minelayers cannot be guards, pariahs, or villagers
