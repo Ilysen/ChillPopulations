@@ -6,10 +6,13 @@ Chill Populations is licensed under the [GNU General Public License v3](http://w
 
 ## Changelog
 
+### 23 September, 2024
+#### Version 1.1.1
+* Updated to work with game version 2.0.207.101.
+* Updated the author listing to use my current preferred name. Mod ID was kept the same to ensure save compat.
+
 ### 11 October, 2023
 Note: 1.1 onwards is licensed under GNU General Public License v3. Versions prior to 1.0 remain licensed under the MIT License.
-
-**This version won't be publicly released until a save-breaking update has been pushed to the stable branch, to avoid bricking existing saves.**
 
 #### Version 1.1
 * Reassessed the whole list of barred creatures. A lot of things can spawn in certain roles now, rather than the block list being completely comprehensive. The new list is as follows:

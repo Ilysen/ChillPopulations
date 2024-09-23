@@ -28,9 +28,9 @@
 
 	<!-- Creatures that spawn with other creatures.
 		These are all barred from being guards or thralls, but can still be cultists, pariahs, or villagers.-->
-	<object Name="Chrome Idol" Load="Merge">
+	<object Name="Unplanished Godhed" Load="Merge">
 		<tag Name="NoGuard" />
-		<!-- Chrome idols have a mental shield, so we don't need to apply the NoThrall tag here -->
+		<!-- Godheds have a mental shield, so we don't need to apply the NoThrall tag here -->
 	</object>
 	<object Name="Eyeless King Crab" Load="Merge">
 		<tag Name="NoGuard" />

@@ -39,7 +39,7 @@ namespace Ava.ChillPopulations.HarmonyPatches
 		static bool GeneratePariahOverride(int level, bool AlterName, bool IsUnique, ref GameObject __result)
 		{
 			Predicate<GameObjectBlueprint> filter = c => !c.HasTagOrProperty("Ava_ChillPopulations_NoPariah");
-			GameObject filteredCreature = (level == -1 ? EncountersAPI.GetACreature(filter) : EncountersAPI.GetCreatureAroundLevel(level, filter));
+			GameObject filteredCreature = level == -1 ? EncountersAPI.GetACreature(filter) : EncountersAPI.GetCreatureAroundLevel(level, filter);
 			__result = PariahSpawner.GeneratePariah(filteredCreature, AlterName, IsUnique);
 			return false;
 		}
